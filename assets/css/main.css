@@ -17,7 +17,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, .grid, .grid-item, .centred, .grid-image {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1500,6 +1500,35 @@ input, select, textarea {
 				}
 
 		}
+
+/* Grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 230);
+}
+
+.grid-item {
+	width: 230px;
+	height: 230px;
+	background-color: #ffffff;
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+}
+.centred
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.grid-image {
+	width: 230px;
+	height: 230px;
+	position: relative;
+	opacity: 0.5;
+}
 
 /* Main */
 
