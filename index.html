@@ -55,7 +55,7 @@
 							</a>
 							<a href="#totw">
 								<div class="header grid-item">
-									<img class="grid-image" src="images/spottydogProductions80x80.png">
+									<img class="grid-image" src="images/totwSQUARE.png">
 									<div class="centred"> Tails of the Wild <br /> C# & Unity <br /> Personal Project</div>
 								</div>
 							</a>
@@ -74,7 +74,7 @@
 						<!-- Intro/about -->
 							<article id="intro">
 								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image main"><img src="images/meLONG.jpg" alt="" /></span>
 								<p>Hi, I'm Emily, a Games Development Degree student at Staffordshire University! 
 								I'm a programmer with knowledge in C++, C# with Unity, and Python.</p>
 								<p>During my studies, I intend to develop my skills in C++ for use with Unreal Engine, 
@@ -96,7 +96,7 @@
 								<p></p>
 								<br>
 								<h3>Tails of the Wild || C# & Unity || Personal Project</h3>
-								<span class="image main"><img class="image main" src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img class="image main" src="images/totwLONG.png" alt="" /></span>
 								<p>A top-down rogue-like, inspired by Pokemon Mystery Dungeon, also created in Unity using C#. This game currently features an infinite run, in which the player must make their way to the exit of each randomly generated level without starving, or running out of health. Enemies constantly pursue the player in an attempt to hinder progress.</p>
 								<a href="#totw" class="button primary">More...</a>
 								<p></p>
@@ -138,7 +138,7 @@
 							<article id="pacman">
 								<h2 class="major">Portfolio</h2>
 								<h3>Pacman || C++ || Coursework</h3>
-								<span class="image main"><img class="image main" src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img class="image main" src="images/pacmanLONG.jpg" alt="" /></span>
 								<p>A purely C++ recreation of Pacman using the S2D library. This project was developed over the course of my first semester while learning and using C++ and S2D, a library based on OpenGL and OpenAL, for the first time.</p>
 								<p>I used an external text file to edit each level's walls and dot placements by loading it into the game as a vector, then </p>
 							</article>
@@ -147,7 +147,7 @@
 							<article id="ogretime">
 								<h2 class="major">Portfolio</h2>
 								<h3>Ogre Time || C# & Unity || Game Jam</h3>
-								<span class="image main"><img class="image main" src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img class="image main" src="images/ogretimeLONG.png" alt="" /></span>
 								<p>A 2D platformer puzzle game made in Unity using C#, as part of the 2021 Ukie Game Jam. I specifically worked on the puzzle elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling off platforms or walking into walls, and causes them to attack the player characters.</p>
 								<p>Over the two days of this project, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for the enemies. The code I wrote allowed them to continually patrol a platform, walking until a raycast at its feel returned that it did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction. Similarly, I wrote a script that would allow an enemy to perform a certain action if the player was in range: the guard enemy would speed up, charging blindly towards a player character, and swing their sword on contact, while the mage enemy would shoot a fireball. Not implemented was a hunter enemy, which combined aspects of both enemies, and could trap the ogre with a net.</p>
 								<p>On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers. Quite simply, if that player was within the raycast range of the lever upon pressing the interact button, they would be able to switch it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the object's starting position, and take a set ending position. When activated, the platform would smoothly move from point A to point B, until it was deactivated, at which point it would return to its starting position. Not implemented was a pressure plate, which could be triggered by either player.</p>
@@ -157,7 +157,7 @@
 							<article id="totw">
 								<h2 class="major">Portfolio</h2>
 								<h3>Tails of the Wild || C# & Unity || Personal</h3>
-								<span class="image main"><img class="image main" src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img class="image main" src="images/totwLONG.png" alt="" /></span>
 								<p>A top-down rogue-like, inspired by Pokemon Mystery Dungeon, created in Unity using C#. This game currently features an infinite run, in which the player must make their way to the exit of each randomly generated level without starving, or running out of health. Enemies constantly pursue the player in an attempt to hinder progress.</p>
 								<p>In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven. The game determines a random number of rooms to generate, and continues to generate them in a limited space, giving them a random width, height, and number of door tiles with each attempt. It ensures that these rooms do not overlap, nor that they escape the level boundary. Then, it randomly shuffles these rooms, generating corridors between them until all rooms are connected and inactive. All generation is initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in Unity, which are each given a random texture for variety. On top of this, enemies and items are spawned in the level to attack the player, and to heal the player's hunger or health.</p>
 								<p>This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and attack the player, or run away to random tiles in the map depending on the random behaviour chosen. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue to generate as the level continues, away from the player, until they eventually find them to attack.</p	>
@@ -167,7 +167,7 @@
 							<article id="mario">
 								<h2 class="major">Portfolio</h2>
 								<h3>Mario || C++ || Coursework TBA</h3>
-								<span class="image main"><img class="image main" src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img class="image main" src="images/marioLONG.jpg" alt="" /></span>
 								<p>This is a project I will be working on for my second semeseter. Look out for it!</p>
 							</article>
 							
