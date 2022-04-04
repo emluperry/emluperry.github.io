@@ -180,26 +180,30 @@
 								<h3>Ogre Time || C# & Unity || Game Jam</h3>
 								<span class="image main"><img class="image main" src="images/ogretimeLONG.png" alt="" /></span>
 								<p>
-									A 2D platformer puzzle game made in Unity using C#, as part of the 2021 Ukie Game Jam. I specifically worked on the puzzle 
-									elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling 
+									A 2D platformer puzzle game made in Unity using C#, as part of the 2021 Ukie Game Jam. I specifically worked on the puzzle
+									elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling
 									off platforms or walking into walls, and causes them to attack the player characters.
 								</p>
+								<span class="image main"><img class="image main" src="images/ogreTimeEnemy.png" alt="" /></span>
 								<p>
-									Over the two days of this project, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for 
-									the enemies. The code I wrote allowed them to continually patrol a platform, walking until a raycast at its feel returned that it 
-									did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction. 
-									Similarly, I wrote a script that would allow an enemy to perform a certain action if the player was in range: the guard enemy would 
-									speed up, charging blindly towards a player character, and swing their sword on contact, while the mage enemy would shoot a fireball. 
+									Over the two days of this project, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for
+									the enemies. The code I wrote allowed them to continually patrol a platform, walking until a raycast at its feel returned that it
+									did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction.
+									Similarly, I wrote a script that would allow an enemy to perform a certain action if the player was in range: the guard enemy would
+									speed up, charging blindly towards a player character, and swing their sword on contact, while the mage enemy would shoot a fireball.
 									Not implemented was a hunter enemy, which combined aspects of both enemies, and could trap the ogre with a net.
 								</p>
+								<span class="image main"><img class="image main" src="images/ogreTimeLever.png" alt="" /></span>
 								<p>
-									On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers. 
-									Quite simply, if that player was within the raycast range of the lever upon pressing the interact button, they would be able to switch 
-									it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the 
-									object's starting position, and take a set ending position. When activated, the platform would smoothly move from point A to point B, 
-									until it was deactivated, at which point it would return to its starting position. Not implemented was a pressure plate, which could 
+									On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers.
+									Quite simply, if that player was within the raycast range of the lever upon pressing the interact button, they would be able to switch
+									it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the
+									object's starting position, and take a set ending position. When activated, the platform would smoothly move from point A to point B,
+									until it was deactivated, at which point it would return to its starting position. Not implemented was a pressure plate, which could
 									be triggered by either player.
 								</p>
+								<p>Ogre Time is available to download here, on <a href="https://dragosmt.itch.io/teeth-for-hair-ogre-time">Itch.io</a></p>
+								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/20tP4GxfX_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</article>
 
 							<!-- TOTW -->
