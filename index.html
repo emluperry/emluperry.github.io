@@ -93,7 +93,8 @@
 								<p>
 									A purely C++ recreation of Pacman using the S2D library. This project was developed over the course of my
 									first semester while learning and using C++ for the first time. I used an external text file to edit each
-									level's walls and dot placements by loading it into the game as a vector.
+									level's walls and dot placements by loading it into the game as a vector, keep track of scores for a high score 
+									table, and programmed the ghosts to have a basic pathfinding AI.
 								</p>
 								<a href="#pacman" class="button primary">More...</a>
 								<p></p>
@@ -160,17 +161,30 @@
 								<h3>Pacman || C++ || Coursework</h3>
 								<span class="image main"><img class="image main" src="images/pacmanLONG.jpg" alt="" /></span>
 								<p>
-									A purely C++ recreation of Pacman using the S2D library. This project was developed over 
+									A purely C++ recreation of Pacman using the S2D library. This project was developed over
 									the course of my first semester while learning and using C++ and S2D, a library based on OpenGL and OpenAL, for the first time.
 								</p>
+								<span class="image main"><img class="image main" src="images/pacmanLevelFile.png" alt="" /></span>
 								<p>
-									I used an external text file to edit each level's walls and dot placements by loading it into the game as a vector of characters, 
-									with each character representing a wall, a dot, a power pellet, or empty space. This vector was then used to generate different 
-									instances of a struct for each potential object, which kept track of its own position, texture and collision.
+									I used an external text file to edit each level's walls and dot placements by loading it into the game as a vector of characters, x, o, O and '.',
+									with each character representing a wall, a dot, a power pellet, or empty space. This vector was then used to generate different
+									instances of a struct for each potential object, which kept track of its own position, texture and collision. This allowed me to
+									dynamically alter levels to have a different layout, different dot and pellet placements, and overall, different maze layouts.
 								</p>
 								<p>
-									The game also features a basic high score system, using input into the console, which is stored in an external file and can be 
-									loaded into the game once closed and reopened.
+									The game also features a basic high score system, using input into the console, which is stored in an external file and can be
+									loaded into the game once closed and reopened. The game compares the player's current score with the last value in the high score file to 
+									determine whether the table needs to be updated. Then, it takes an input for the player's name, and updates the stored table with the new 
+									score.
+								</p>
+								<span class="image main"><img class="image main" src="images/pacmanEnemyAI.png" alt="" /></span>
+								<p>
+									The ghosts each follow a pathfinding AI, based on a target position calculated differently for each ghost to create different behaviours. 
+									Whenever a ghost determines that it has reached an intersection through a simple raycast system that checks for collisions, it will determine 
+									which path would take it closer to it's target position, and take that path. The red ghost will always target Pacman; the pink ghost targets a 
+									position a few paces in front of Pacman; the blue ghost targets a position in line with Pacman and the red ghost; the orange ghost targets Pacman 
+									until it gets too close, at which point it retreats. All ghosts also have their own 'home' position that they will retreat to using the same system 
+									upon activating the power pellet.
 								</p>
 							</article>
 
