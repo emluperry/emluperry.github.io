@@ -226,24 +226,26 @@
 								<h3>Tails of the Wild || C# & Unity || Personal</h3>
 								<span class="image main"><img class="image main" src="images/totwLONG.png" alt="" /></span>
 								<p>
-									A top-down rogue-like, inspired by Pokemon Mystery Dungeon, created in Unity using C#. This game currently features an infinite run, 
-									in which the player must make their way to the exit of each randomly generated level without starving, or running out of health. 
+									A top-down rogue-like, inspired by Pokemon Mystery Dungeon, created in Unity using C#. This game currently features an infinite run,
+									in which the player must make their way to the exit of each randomly generated level without starving, or running out of health.
 									Enemies constantly pursue the player in an attempt to hinder progress.
 								</p>
+								<span class="image main"><img class="image main" src="images/totwMap.png" alt="" /></span>
 								<p>
-									In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven. 
-									The game determines a random number of rooms to generate, and continues to generate them in a limited space, giving them a random width, 
-									height, and number of door tiles with each attempt. It ensures that these rooms do not overlap, nor that they escape the level boundary. 
-									Then, it randomly shuffles these rooms, generating corridors between them until all rooms are connected and inactive. All generation is 
-									initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in 
-									Unity, which are each given a random texture for variety. On top of this, enemies and items are spawned in the level to attack the 
-									player, and to heal the player's hunger or health.
+									In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven.
+									The game determines a random number of rooms, R, to generate, and continues to generate them in a limited space, giving them a random width,
+									height, and number of door tiles with each attempt. It ensures that these rooms do not overlap, nor that they escape the level boundary.
+									Then, it randomly shuffles these rooms, generating corridors, C, between them until all rooms are connected and inactive. All generation is
+									initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in
+									Unity, which are each given a random texture for variety. On top of this, enemies, E, and items, I, are spawned in the level to attack the
+									player, and to heal the player's hunger or health. Finally, the player itself, P, is given a starting position that does not overlap with an enemy.
 								</p>
+								<span class="image main"><img class="image main" src="images/totwEnemies.png" alt="" /></span>
 								<p>
-									This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and 
-									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. After a set amount of steps, an 
-									enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue to generate as the level continues, 
-									away from the player, until they eventually find them to attack.
+									This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and
+									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. The enemy determines where to move using a reference 
+									to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue 
+									to generate as the level continues, away from the player, until they eventually find them to attack.
 								</p>
 							</article>
 
