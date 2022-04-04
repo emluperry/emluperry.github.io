@@ -93,7 +93,8 @@
 								<p>
 									A purely C++ recreation of Pacman using the S2D library. This project was developed over the course of my
 									first semester while learning and using C++ for the first time. I used an external text file to edit each
-									level's walls and dot placements by loading it into the game as a vector.
+									level's walls and dot placements by loading it into the game as a vector, keep track of scores for a high score 
+									table, and programmed the ghosts to have a basic pathfinding AI.
 								</p>
 								<a href="#pacman" class="button primary">More...</a>
 								<p></p>
@@ -160,17 +161,30 @@
 								<h3>Pacman || C++ || Coursework</h3>
 								<span class="image main"><img class="image main" src="images/pacmanLONG.jpg" alt="" /></span>
 								<p>
-									A purely C++ recreation of Pacman using the S2D library. This project was developed over 
+									A purely C++ recreation of Pacman using the S2D library. This project was developed over
 									the course of my first semester while learning and using C++ and S2D, a library based on OpenGL and OpenAL, for the first time.
 								</p>
+								<span class="image main"><img class="image main" src="images/pacmanLevelFile.png" alt="" /></span>
 								<p>
-									I used an external text file to edit each level's walls and dot placements by loading it into the game as a vector of characters, 
-									with each character representing a wall, a dot, a power pellet, or empty space. This vector was then used to generate different 
-									instances of a struct for each potential object, which kept track of its own position, texture and collision.
+									I used an external text file to edit each level's walls and dot placements by loading it into the game as a vector of characters, x, o, O and '.',
+									with each character representing a wall, a dot, a power pellet, or empty space. This vector was then used to generate different
+									instances of a struct for each potential object, which kept track of its own position, texture and collision. This allowed me to
+									dynamically alter levels to have a different layout, different dot and pellet placements, and overall, different maze layouts.
 								</p>
 								<p>
-									The game also features a basic high score system, using input into the console, which is stored in an external file and can be 
-									loaded into the game once closed and reopened.
+									The game also features a basic high score system, using input into the console, which is stored in an external file and can be
+									loaded into the game once closed and reopened. The game compares the player's current score with the last value in the high score file to 
+									determine whether the table needs to be updated. Then, it takes an input for the player's name, and updates the stored table with the new 
+									score.
+								</p>
+								<span class="image main"><img class="image main" src="images/pacmanEnemyAI.png" alt="" /></span>
+								<p>
+									The ghosts each follow a pathfinding AI, based on a target position calculated differently for each ghost to create different behaviours. 
+									Whenever a ghost determines that it has reached an intersection through a simple raycast system that checks for collisions, it will determine 
+									which path would take it closer to it's target position, and take that path. The red ghost will always target Pacman; the pink ghost targets a 
+									position a few paces in front of Pacman; the blue ghost targets a position in line with Pacman and the red ghost; the orange ghost targets Pacman 
+									until it gets too close, at which point it retreats. All ghosts also have their own 'home' position that they will retreat to using the same system 
+									upon activating the power pellet.
 								</p>
 							</article>
 
@@ -180,26 +194,30 @@
 								<h3>Ogre Time || C# & Unity || Game Jam</h3>
 								<span class="image main"><img class="image main" src="images/ogretimeLONG.png" alt="" /></span>
 								<p>
-									A 2D platformer puzzle game made in Unity using C#, as part of the 2021 Ukie Game Jam. I specifically worked on the puzzle 
-									elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling 
+									A 2D platformer puzzle game made in Unity using C#, as part of the 2021 Ukie Game Jam. I specifically worked on the puzzle
+									elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling
 									off platforms or walking into walls, and causes them to attack the player characters.
 								</p>
+								<span class="image main"><img class="image main" src="images/ogreTimeEnemy.png" alt="" /></span>
 								<p>
-									Over the two days of this project, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for 
-									the enemies. The code I wrote allowed them to continually patrol a platform, walking until a raycast at its feel returned that it 
-									did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction. 
-									Similarly, I wrote a script that would allow an enemy to perform a certain action if the player was in range: the guard enemy would 
-									speed up, charging blindly towards a player character, and swing their sword on contact, while the mage enemy would shoot a fireball. 
+									Over the two days of this project, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for
+									the enemies. The code I wrote allowed them to continually patrol a platform, walking until a raycast at its feel returned that it
+									did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction.
+									Similarly, I wrote a script that would allow an enemy to perform a certain action if the player was in range: the guard enemy would
+									speed up, charging blindly towards a player character, and swing their sword on contact, while the mage enemy would shoot a fireball.
 									Not implemented was a hunter enemy, which combined aspects of both enemies, and could trap the ogre with a net.
 								</p>
+								<span class="image main"><img class="image main" src="images/ogreTimeLever.png" alt="" /></span>
 								<p>
-									On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers. 
-									Quite simply, if that player was within the raycast range of the lever upon pressing the interact button, they would be able to switch 
-									it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the 
-									object's starting position, and take a set ending position. When activated, the platform would smoothly move from point A to point B, 
-									until it was deactivated, at which point it would return to its starting position. Not implemented was a pressure plate, which could 
+									On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers.
+									Quite simply, if that player was within the raycast range of the lever upon pressing the interact button, they would be able to switch
+									it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the
+									object's starting position, and take a set ending position. When activated, the platform would smoothly move from point A to point B,
+									until it was deactivated, at which point it would return to its starting position. Not implemented was a pressure plate, which could
 									be triggered by either player.
 								</p>
+								<p>Ogre Time is available to download here, on <a href="https://dragosmt.itch.io/teeth-for-hair-ogre-time">Itch.io</a></p>
+								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/20tP4GxfX_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</article>
 
 							<!-- TOTW -->
@@ -208,24 +226,26 @@
 								<h3>Tails of the Wild || C# & Unity || Personal</h3>
 								<span class="image main"><img class="image main" src="images/totwLONG.png" alt="" /></span>
 								<p>
-									A top-down rogue-like, inspired by Pokemon Mystery Dungeon, created in Unity using C#. This game currently features an infinite run, 
-									in which the player must make their way to the exit of each randomly generated level without starving, or running out of health. 
+									A top-down rogue-like, inspired by Pokemon Mystery Dungeon, created in Unity using C#. This game currently features an infinite run,
+									in which the player must make their way to the exit of each randomly generated level without starving, or running out of health.
 									Enemies constantly pursue the player in an attempt to hinder progress.
 								</p>
+								<span class="image main"><img class="image main" src="images/totwMap.png" alt="" /></span>
 								<p>
-									In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven. 
-									The game determines a random number of rooms to generate, and continues to generate them in a limited space, giving them a random width, 
-									height, and number of door tiles with each attempt. It ensures that these rooms do not overlap, nor that they escape the level boundary. 
-									Then, it randomly shuffles these rooms, generating corridors between them until all rooms are connected and inactive. All generation is 
-									initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in 
-									Unity, which are each given a random texture for variety. On top of this, enemies and items are spawned in the level to attack the 
-									player, and to heal the player's hunger or health.
+									In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven.
+									The game determines a random number of rooms, R, to generate, and continues to generate them in a limited space, giving them a random width,
+									height, and number of door tiles with each attempt. It ensures that these rooms do not overlap, nor that they escape the level boundary.
+									Then, it randomly shuffles these rooms, generating corridors, C, between them until all rooms are connected and inactive. All generation is
+									initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in
+									Unity, which are each given a random texture for variety. On top of this, enemies, E, and items, I, are spawned in the level to attack the
+									player, and to heal the player's hunger or health. Finally, the player itself, P, is given a starting position that does not overlap with an enemy.
 								</p>
+								<span class="image main"><img class="image main" src="images/totwEnemies.png" alt="" /></span>
 								<p>
-									This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and 
-									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. After a set amount of steps, an 
-									enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue to generate as the level continues, 
-									away from the player, until they eventually find them to attack.
+									This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and
+									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. The enemy determines where to move using a reference 
+									to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue 
+									to generate as the level continues, away from the player, until they eventually find them to attack.
 								</p>
 							</article>
 
@@ -235,9 +255,16 @@
 								<h3>Mario || C++ || Coursework TBA</h3>
 								<span class="image main"><img class="image main" src="images/marioLONG.jpg" alt="" /></span>
 								<p>
-									An in progress recreation of the Mario Bros arcade/NES game. This project is being developed over the course of my second semester, 
-									developing my coding skills using SDL.
+									An in progress recreation of the Mario Bros arcade/NES game. This project is being developed over the course of my second semester,
+									developing my coding skills using SDL. As of typing, the game has a simple first level with enemies that walk from the pipes at the top of the screen, 
+									down to the pipes at the bottom, where they then disappear. Other enemies spawn as time goes on. If Mario or Luigi touches an enemy when they have not been 
+									downed by the POW block, they are killed, disappearing.
 								</p>
+								<p>
+									I am currently working on a tile system which should allow me to build my own levels, in preparation for the creation of a level 2. I would also like to 
+									allow the project to have a scrolling background and level as a whole, in order to make the levels larger and more interesting to navigate.
+								</p>
+								<video width="560" height="315" controls><source src="videos/wipMario.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 							</article>
 							
 
