@@ -173,19 +173,20 @@
 								</p>
 								<p>
 									The game also features a basic high score system, using input into the console, which is stored in an external file and can be
-									loaded into the game once closed and reopened. The game compares the player's current score with the last value in the high score file to 
-									determine whether the table needs to be updated. Then, it takes an input for the player's name, and updates the stored table with the new 
+									loaded into the game once closed and reopened. The game compares the player's current score with the last value in the high score file to
+									determine whether the table needs to be updated. Then, it takes an input for the player's name, and updates the stored table with the new
 									score.
 								</p>
 								<span class="image main"><img class="image main" src="images/pacmanEnemyAI.png" alt="" /></span>
 								<p>
-									The ghosts each follow a pathfinding AI, based on a target position calculated differently for each ghost to create different behaviours. 
-									Whenever a ghost determines that it has reached an intersection through a simple raycast system that checks for collisions, it will determine 
-									which path would take it closer to it's target position, and take that path. The red ghost will always target Pacman; the pink ghost targets a 
-									position a few paces in front of Pacman; the blue ghost targets a position in line with Pacman and the red ghost; the orange ghost targets Pacman 
-									until it gets too close, at which point it retreats. All ghosts also have their own 'home' position that they will retreat to using the same system 
+									The ghosts each follow a pathfinding AI, based on a target position calculated differently for each ghost to create different behaviours.
+									Whenever a ghost determines that it has reached an intersection through a simple raycast system that checks for collisions, it will determine
+									which path would take it closer to it's target position, and take that path. The red ghost will always target Pacman; the pink ghost targets a
+									position a few paces in front of Pacman; the blue ghost targets a position in line with Pacman and the red ghost; the orange ghost targets Pacman
+									until it gets too close, at which point it retreats. All ghosts also have their own 'home' position that they will retreat to using the same system
 									upon activating the power pellet.
 								</p>
+								<video class="image main" width="560" height="315" controls><source src="videos/pacman.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 							</article>
 
 							<!-- OgreTime -->
@@ -217,7 +218,7 @@
 									be triggered by either player.
 								</p>
 								<p>Ogre Time is available to download here, on <a href="https://dragosmt.itch.io/teeth-for-hair-ogre-time">Itch.io</a></p>
-								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/20tP4GxfX_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe class="image main" width="560" height="315" src="https://www.youtube-nocookie.com/embed/20tP4GxfX_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</article>
 
 							<!-- TOTW -->
@@ -243,10 +244,11 @@
 								<span class="image main"><img class="image main" src="images/totwEnemies.png" alt="" /></span>
 								<p>
 									This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and
-									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. The enemy determines where to move using a reference 
-									to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue 
+									attack the player, or run away to random tiles in the map depending on the random behaviour chosen. The enemy determines where to move using a reference
+									to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue
 									to generate as the level continues, away from the player, until they eventually find them to attack.
 								</p>
+								<video class="image main" width="560" height="315" controls><source src="videos/totw.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 							</article>
 
 							<!-- Mario -->
@@ -264,7 +266,7 @@
 									I am currently working on a tile system which should allow me to build my own levels, in preparation for the creation of a level 2. I would also like to 
 									allow the project to have a scrolling background and level as a whole, in order to make the levels larger and more interesting to navigate.
 								</p>
-								<video width="560" height="315" controls><source src="videos/wipMario.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+								<video class="image main" width="560" height="315" controls><source src="videos/wipMario.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 							</article>
 							
 
