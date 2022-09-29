@@ -4,7 +4,7 @@
 .topnav {
     background-color: #74a3b8;
     overflow: hidden;
-    width: 65%;
+    max-width: 1250px;
     margin: auto;
 }
 
@@ -20,7 +20,7 @@
 
         .topnav a:hover {
             background-color: #8adcff;
-            color: #def5ff;
+            color: #5b91a8;
         }
 
         .topnav a.active {
@@ -34,6 +34,7 @@
 
     .topnav a.logo{
         padding: 2px 16px;
+        margin: auto;
     }
 
     .topnav .icon {
