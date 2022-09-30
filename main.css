@@ -99,7 +99,7 @@ nav{
 
 .section-a .titleCard {
     text-align: center;
-    padding: 15vh 5vw 1vh 5vw;
+    padding: 15vh 1vw 1vh 3vw;
 }
 
 @media screen and (max-width: 600px) {
@@ -114,7 +114,6 @@ nav{
     }
 
         .section-a .portfolioHighlights .gridItem {
-            
             width: 200px;
             height: 200px;
             background-color: #ffffff;
@@ -122,6 +121,7 @@ nav{
             text-align: center;
             text-transform: uppercase;
             position: relative;
+            border-radius: 3px;
         }
 
             .section-a .portfolioHighlights .gridItem .centered {
@@ -136,6 +136,7 @@ nav{
                 height: 200px;
                 position: relative;
                 opacity: 0.5;
+                border-radius: inherit;
             }
 
 .flex-container{
@@ -166,10 +167,16 @@ footer {
     }
 
 .linkIcon {
-    font-size: 30px;
-    color: #ffffff;
     font-weight: 300;
     letter-spacing: 1rem;
     line-height: 1.5;
     text-decoration: none;
+}
+
+footer .linkIcon {
+    color: #fff;
+}
+
+.section-a .linkIcon {
+    color: #000;
 }
