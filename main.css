@@ -1,5 +1,13 @@
-﻿body {
-    background-color: #1c2c33;
+﻿/*COLOURS:
+    #314A66 - DARK BLUE FOR BACKGROUND
+    #8CD2D3 - LIGHTER MUTED TEAL FOR CONTENT (SECTION A)
+    #B6DEE5 - NAVBAR LINK HIGHLIGHT
+    #3AE1E7 - NAVBAR LINK ACTIVE HIGHLIGHT
+    #66C6D0 - MUTED TEAL FOR NAVBAR
+*/
+
+body {
+    background-color: #314A66;
 }
 
 nav{
@@ -8,18 +16,17 @@ nav{
 }
 
 .topnav {
-    background-color: #74a3b8;
+    background-color: #66C6D0;
     overflow: hidden;
     max-width: 1250px;
     margin: auto;
     border-radius: 15px 15px 5px 5px;
-    box-shadow: 5px 5px 5px;
 }
 
     .topnav a {
         float: left;
         display: block;
-        color: #f2f2f2;
+        color: #000;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -27,16 +34,16 @@ nav{
     }
 
         .topnav a:hover {
-            background-color: #8adcff;
-            color: #5b91a8;
+            background-color: #B6DEE5;
+            color: #000;
         }
 
         .topnav a.active {
-            background-color: #45caff;
-            color: #edf3ff;
+            background-color: #3AE1E7;
+            color: #fff;
         }
 
-    .topnav .rightLink{
+    .topnav .rightAlign{
         float: right;
     }
 
@@ -74,3 +81,39 @@ nav{
             text-align: left;
         }
     }
+
+.rightAlign {
+    text-align: right;
+}
+
+.section-a {
+    background-color: #8CD2DE;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 2px 2px 5px 5px;
+    box-shadow: 5px 5px 10px;
+}
+
+.section-a .titleCard {
+    text-align: center;
+    padding: 5vh 5vw 1vh 5vw;
+}
+
+    .section-a .portfolioHighlights {
+        text-align: center;
+        padding: 5vh 7vw 1vh 7vw;
+    }
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px)
+{
+    .flex-container{
+        flex-direction: column;
+    }
+}
