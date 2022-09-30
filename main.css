@@ -91,7 +91,7 @@ nav{
     max-width: 1000px;
     margin: auto;
     margin-top: 30px;
-    padding: 5px 30px 5px 30px;
+    padding: 5px 30px 40px 30px;
     border-radius: 2px 2px 5px 5px;
     box-shadow: 5px 5px 10px;
 }
@@ -103,12 +103,38 @@ nav{
 
     .section-a .portfolioHighlights {
         text-align: center;
-        padding: 5vh 7vw 1vh 7vw;
+        margin:auto;
     }
+
+        .section-a .portfolioHighlights .gridItem {
+            
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+            .section-a .portfolioHighlights .gridItem .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .section-a .portfolioHighlights .gridItem .gridImage {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                opacity: 0.5;
+            }
 
 .flex-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 600px)
