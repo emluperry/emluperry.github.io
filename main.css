@@ -1,11 +1,19 @@
 ﻿body {
     background-color: #1c2c33;
 }
+
+nav{
+    position: sticky;
+    top: 0px;
+}
+
 .topnav {
     background-color: #74a3b8;
     overflow: hidden;
     max-width: 1250px;
     margin: auto;
+    border-radius: 15px 15px 5px 5px;
+    box-shadow: 5px 5px 5px;
 }
 
     .topnav a {
