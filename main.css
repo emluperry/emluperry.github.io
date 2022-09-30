@@ -9,6 +9,7 @@
 
 body {
     background-color: #314A66;
+    background-image: url("images/background.jpeg");
 }
 
 nav{
@@ -110,7 +111,7 @@ nav{
 
     .section-a .portfolioHighlights {
         text-align: center;
-        margin:auto;
+        margin: auto;
     }
 
         .section-a .portfolioHighlights .gridItem {
@@ -175,6 +176,10 @@ footer {
 
 footer .linkIcon {
     color: #fff;
+}
+
+footer a {
+    color: #314A66
 }
 
 .section-a .linkIcon {
