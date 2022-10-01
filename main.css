@@ -165,7 +165,7 @@ footer {
     border-radius: 5px 5px 15px 15px;
 }
 
-    footer p {
+    footer > p {
         padding: 0vh 0vw 0vh 6vw;
     }
 
@@ -201,3 +201,22 @@ footer a {
     margin: auto;
     flex-basis: 25vw;
 }
+
+.section-b {
+    background-color: #9fc3c9;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 2vh 30px 2vh 30px;
+    border-radius: 2px 2px 5px 5px;
+    box-shadow: 5px 5px 10px;
+}
+
+    .section-b > .flex-container > p {
+        background-color: #B6DEE5;
+        margin: 5px 10px 5px 10px;
+        padding: 10px;
+        flex-grow: 1;
+        text-align: center;
+        border-radius: 10px;
+    }
