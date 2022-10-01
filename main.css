@@ -99,10 +99,11 @@ nav{
     box-shadow: 5px 5px 10px;
 }
 
-.section-a .titleCard {
-    text-align: center;
-    padding: 15vh 1vw 1vh 3vw;
-}
+    .section-a .titleCard {
+        text-align: center;
+        padding: 15vh 1vw 1vh 3vw;
+        flex-basis: 25vw;
+    }
 
 @media screen and (max-width: 600px) {
     .section-a .titleCard {
@@ -185,4 +186,18 @@ footer a {
 
 .section-a .linkIcon {
     color: #000;
+}
+
+.section-a .photoColumn {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 10px;
+    padding: 2vh 0vw 1vh 1vw;
+}
+
+.section-a .aboutColumn {
+    text-align: center;
+    margin: auto;
+    flex-basis: 25vw;
 }
