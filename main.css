@@ -5,6 +5,9 @@
     #3AE1E7 - NAVBAR LINK ACTIVE HIGHLIGHT
     #66C6D0 - MUTED TEAL FOR NAVBAR
     #0d1926 - DARK BLUE FOOTER
+    #8CD2DE - section a colour
+    #9fc3c9 - section b colour
+    #70abb5 - dark blue tabs
 */
 
 body {
@@ -133,34 +136,33 @@ nav{
 
         .section-a .portfolioHighlights .gridItem {
             width: 200px;
-            height: 200px;
-            background-color: #ffffff;
+            height: 240px;
+            background-color: #70abb5;
             color: #000000;
             text-align: center;
             text-transform: uppercase;
             position: relative;
-            border-radius: 3px;
+            border-radius: 5px 5px 3px 3px;
+            margin: 3px;
         }
 
-            .section-a .portfolioHighlights .gridItem .centered {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            .section-a .portfolioHighlights .gridItem .details {
+                width: 200px;
+                height: 40px;
             }
 
             .section-a .portfolioHighlights .gridItem .gridImage {
                 width: 200px;
                 height: 200px;
                 position: relative;
-                opacity: 0.5;
-                border-radius: inherit;
+                border-radius: 0px 0px 3px 3px;
             }
 
 .flex-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content:center;
 }
 
 @media screen and (max-width: 600px)
