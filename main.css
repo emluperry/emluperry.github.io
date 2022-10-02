@@ -123,9 +123,18 @@ nav{
 
     .section-a .contactDetails > p.socialHeading {
         font-size: 18px;
+        background-color: #70abb5;
+        padding: 0px 1vw 0px 1vw;
+        max-width: 250px;
+        border-radius: 5px 5px 0px 0px;
     }
 
-    .section-a .contactDetails > p.socialHeading > a {
+    .section-a .contactDetails > p.socialHeading a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .section-a .contactDetails > p.socialHeading > .linkIcon {
         font-size: 30px;
     }
 
@@ -249,7 +258,7 @@ footer a {
     margin: auto;
     margin-top: 30px;
     padding: 2vh 30px 2vh 30px;
-    border-radius: 2px 2px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
     box-shadow: 5px 5px 10px;
 }
 
