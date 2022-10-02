@@ -243,3 +243,26 @@ footer a {
         text-align: center;
         border-radius: 10px;
     }
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #66C6D0;
+}
+
+    .btn:hover {
+        background-color: #B6DEE5;
+    }
+
+    .btn:active {
+        background-color: #3AE1E7;
+    }
+
+.miniNav {
+    background-color: #66C6D0;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 3px;
+    border-radius: 15px 15px 5px 5px;
+}

@@ -31,27 +31,43 @@
         </div>
 
         <div class="portfolioHighlights">
-            <h3>Portfolio Highlights</h3>
+            <div class="flex-container" style="flex-direction:column;">
+                <div class="miniNav">
+                    <button class="btn" onclick="filterSelection('all')">Show All</button>
+                    <button class="btn active" onclick="filterSelection('featured')">Featured</button>
+                </div>
+                <div class="miniNav">
+                    <button class="btn" onclick="filterSelection('unity')">Unity</button>
+                    <button class="btn" onclick="filterSelection('unreal')">Unreal</button>
+                </div>
+                <div class="miniNav">
+                    <button class="btn" onclick="filterSelection('csharp')">C#</button>
+                    <button class="btn" onclick="filterSelection('cpp')">C++</button>
+                    <button class="btn" onclick="filterSelection('javascript')">Javascript</button>
+                    <button class="btn" onclick="filterSelection('python')">Python</button>
+                </div>
+            </div>
+            <br />
             <div class="flex-container">
-                <a href="portfolio/pacman.html">
+                <a href="portfolio/pacman.html" class="featured cpp">
                     <div class="gridItem">
                         <div class="details"> Pacman<br />C++ | Coursework</div>
                         <img class="gridImage" src="images/pacmanSQUARE.PNG">
                     </div>
                 </a>
-                <a href="portfolio/ogretime.html">
+                <a href="portfolio/ogretime.html" class="featured unity csharp">
                     <div class="gridItem">
                         <div class="details"> Ogre Time<br />C# & Unity | Game Jam</div>
                         <img class="gridImage" src="images/ogretimeSQUARE.png">
                     </div>
                 </a>
-                <a href="portfolio/totw.html">
+                <a href="portfolio/totw.html" class="featured unity csharp">
                     <div class="gridItem">
                         <div class="details"> Tails of the Wild<br />C# & Unity | Personal</div>
                         <img class="gridImage" src="images/totwSQUARE.png">
                     </div>
                 </a>
-                <a href="portfolio/pacman.html">
+                <a href="portfolio/mario.html" class="featured cpp">
                     <div class="gridItem">
                         <div class="details"> Mario<br />C++ | Coursework</div>
                         <img class="gridImage" src="images/marioSQUARE.jpg">
