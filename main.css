@@ -102,8 +102,8 @@ nav{
 
     .section-a .titleCard {
         text-align: center;
-        padding: 15vh 1vw 1vh 3vw;
-        flex-basis: 25vw;
+        padding: 15vh 1vw 1vh 1vw;
+        flex-basis: 20vw;
     }
 
 @media screen and (max-width: 600px) {
@@ -220,7 +220,7 @@ footer a {
 .section-a .aboutColumn {
     text-align: center;
     margin: auto;
-    flex-basis: 30vw;
+    flex-basis: 20vw;
 }
 
 .section-b {
