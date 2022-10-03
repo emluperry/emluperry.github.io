@@ -16,6 +16,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*Navigation*/
 nav{
     position: sticky;
     top: 0px;
@@ -93,6 +94,7 @@ nav{
     text-align: right;
 }
 
+/*Screen sections*/
 .section-a {
     background-color: #8CD2DE;
     max-width: 1000px;
@@ -102,7 +104,7 @@ nav{
     border-radius: 2px 2px 5px 5px;
     box-shadow: 5px 5px 10px;
 }
-
+/*Homepage name and desc.*/
     .section-a .titleCard {
         text-align: center;
         padding: 15vh 1vw 1vh 1vw;
@@ -114,7 +116,7 @@ nav{
         padding: 5vh 5vw 1vh 5vw;
     }
 }
-
+/*Social details page*/
 .section-a .contactDetails {
     text-align: left;
     flex-basis: 75vw;
@@ -137,7 +139,7 @@ nav{
     .section-a .contactDetails > p.socialHeading > .linkIcon {
         font-size: 30px;
     }
-
+/*Portfolio link appearance*/
     .section-a .portfolioHighlights {
         text-align: center;
         margin: auto;
@@ -150,7 +152,7 @@ nav{
         .section-a .portfolioHighlights a:hover {
             opacity: 0.7;
         }
-
+        /*Used for filtering*/
         .section-a .portfolioHighlights .gridItem {
             width: 200px;
             height: 240px;
@@ -184,7 +186,7 @@ nav{
             .section-a .portfolioHighlights .portfolio .gridItem.show {
                 display: block;
             }
-
+/*Page container style*/
 .flex-container{
     display: flex;
     flex-direction: row;
@@ -198,7 +200,7 @@ nav{
         flex-direction: column;
     }
 }
-
+/*Footer related*/
 footer {
     background-color: #0d1926;
     color: #fff;
@@ -251,7 +253,7 @@ footer a {
     margin: auto;
     flex-basis: 20vw;
 }
-
+/*Secondary section style*/
 .section-b {
     background-color: #9fc3c9;
     max-width: 1000px;
@@ -262,7 +264,7 @@ footer a {
     box-shadow: 5px 5px 10px;
 }
 
-    .section-b > .flex-container > p {
+    .section-b > .flex-container.skill > p {
         background-color: #B6DEE5;
         margin: 5px 10px 5px 10px;
         padding: 10px;
@@ -270,7 +272,7 @@ footer a {
         text-align: center;
         border-radius: 10px;
     }
-
+/*Portfolio filtering*/
 .btn {
     border: none;
     outline: none;
@@ -292,4 +294,43 @@ footer a {
     margin: auto;
     margin-bottom: 3px;
     border-radius: 15px 15px 5px 5px;
+}
+
+/*Portfolio pages*/
+.imageBox {
+    max-width: 100vw;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.longImage {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    display:grid;
+    border-radius: 4px;
+}
+
+.descText {
+    margin: auto;
+    flex-basis: 75vw;
+}
+
+.smallDescText {
+    margin: auto;
+    flex-basis: 50vw;
+}
+
+.smallNav {
+    margin: auto;
+    flex-basis: 50vw;
+}
+
+video {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    display: grid;
 }
