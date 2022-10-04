@@ -140,10 +140,11 @@ nav{
         font-size: 30px;
     }
 /*Portfolio link appearance*/
-    .section-a .portfolioHighlights {
-        text-align: center;
-        margin: auto;
-    }
+.section-a .portfolioHighlights {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
 
     .section-a .portfolioHighlights a {
         text-decoration: none;
@@ -181,7 +182,6 @@ nav{
         .section-a .portfolioHighlights .portfolio .gridItem {
             display: none;
         }
-
 
             .section-a .portfolioHighlights .portfolio .gridItem.show {
                 display: block;
@@ -251,8 +251,9 @@ footer a {
 .section-a .aboutColumn {
     text-align: center;
     margin: auto;
-    flex-basis: 20vw;
+    flex-basis: 25vw;
 }
+
 /*Secondary section style*/
 .section-b {
     background-color: #9fc3c9;
