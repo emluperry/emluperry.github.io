@@ -142,8 +142,6 @@ nav{
 /*Portfolio link appearance*/
 .section-a .portfolioHighlights {
     margin: auto;
-    text-align: center;
-    justify-content: center;
 }
 
     .section-a .portfolioHighlights a {
@@ -191,13 +189,17 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 600px)
 {
     .flex-container{
         flex-direction: column;
+    }
+
+    .flex-container.portfolio {
+        flex-direction: row;
     }
 }
 /*Footer related*/
@@ -250,6 +252,7 @@ footer a {
 @media screen and (max-width: 600px) {
     .section-a .photoColumn {
         margin: auto;
+        padding: 0px;
     }
 }
 
