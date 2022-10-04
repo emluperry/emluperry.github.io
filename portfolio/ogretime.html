@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="pageTopNav">
+            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
+            <a class="rightAlign" href="../contact.html">SOCIALS</a>
+            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
+            <a class="rightAlign" href="../about.html">ABOUT</a>
+            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="../images/ogretimeLONG.png" />
+            <h1>OGRE TIME</h1>
+            <h3>C# & Unity || UKIE GAME JAM 2021</h3>
+            <h5>A 2D platformer puzzle game created for the </h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <div class="flex-container">
+            <div class="smallNav">
+                <a class="smallNavLink" href="https://dragosmt.itch.io/teeth-for-hair-ogre-time">ITCH.IO PAGE</a>
+            </div>
+            <div class="smallDescText">
+                <p>
+                    I specifically worked on the puzzle elements, levers, moving platforms, and the unused pressure plates, as well as enemy AI which prevents enemies from falling off platforms or walking into walls, and causes them to attack the player characters.
+                </p>
+            </div>
+        </div>
+        <p>
+            Over the course of two days, I spent a large amount of time experimenting with raycasts in Unity to detect local changes for the enemies. The code I wrote allowed them to continually patrol a platform,
+            walking until a raycast at its feel returned that it did not collide with any floor, or alternatively that it was walking into a wall. At this point, it would change direction. Similarly, I wrote a script
+            that would allow an enemy to perform a certain action if the player was in range: the guard enemy would speed up, charging blindly towards a player character, and swing their sword on contact, while the mage
+            enemy would shoot a fireball. Not implemented was a hunter enemy, which combined aspects of both enemies and could trap the ogre with a net.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/ogretimeEnemy.png" />
+            <p>Patrolling enemies</p>
+        </div>
+        <p>
+            On the puzzle side of things, I wrote the script that allows the child player character to interact with objects such as levers. Quite simply, if that player was within the raycast range of the lever upon pressing
+            the interact button, they would be able to switch it on or off. In response, this would cause objects in the scene to move, according to a moving platform script, which would store the object's starting position,
+            and take a set ending position. When activated, the platform would smoothly move from point A to point B, until it was deactivated, at which point it would return to its starting position. Not implemented was a
+            pressure plate, which could be triggered by either player.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/ogreTimeLever.png" />
+            <p>Puzzle solving requires teamwork.</p>
+        </div>
+    </div>
+
+    <div class="section-a">
+        <p>
+            A demonstration of the game can be seen here.
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube-nocookie.com/embed/20tP4GxfX_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>Social Media:</p>
+        <p><a href="https://www.linkedin.com/in/emily-perry-a72324223/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/Osiristic" class="linkIcon fa fa-github"> </a></p>
+        <p class="copyright">
+            &copy; Osiristic / Spotty Dog Productions.
+            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
+
+</body>
+</html>
