@@ -321,7 +321,7 @@ footer a {
 .smallDescText {
     position: relative;
     margin: auto;
-    flex-basis: 20vw;
+    flex-basis: 30vw;
 }
 
 .smallNav {
@@ -330,6 +330,7 @@ footer a {
     position: relative;
     background-color: #66C6D0;
     padding: 1vh 1vw 1vh 1vw;
+    border-radius: 3px;
 }
 
 a.smallNavLink {
@@ -340,11 +341,13 @@ a.smallNavLink {
     padding: 5px 5px;
     text-decoration: none;
     font-size: 17px;
+    border-radius: 10px;
 }
 
     a.smallNavLink:hover {
         background-color: #B6DEE5;
         color: #000;
+
     }
 
 video {
