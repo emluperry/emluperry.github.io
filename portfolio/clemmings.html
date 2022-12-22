@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="pageTopNav">
+            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
+            <a class="rightAlign" href="../contact.html">SOCIALS</a>
+            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
+            <a class="rightAlign" href="../about.html">ABOUT</a>
+            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="../images/clemmings1.gif" />
+            <h1>CLEMMINGS</h1>
+            <h3>Unity & C# || COURSEWORK</h3>
+            <h5>Clone Lemmings - a simple 3D clone of a classic resource management puzzle game.</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <div class="flex-container">
+        </div>
+        <p>
+            In the first semester of my second year, I had to create a game focusing around any one mechanic in Unity. After discussion with one of my lecturers, I landed on trying to create a clone of Lemmings. For each level, I created a GameManager object that would keep track of level specific variables, such as the number of Lemmings the player starts with and should end the game with, the number of each role the player can assign to Lemmings in the level, and so on. I then used an object pool pattern to create instances of each Lemming GameObject, as well as other creatable objects such as the Lemming explosion particle effect, while each level is loading in order to reduce the impact of lag during runtime.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/clemmingsLONG.gif" />
+            <p>Lemmings exiting a level.</p>
+        </div>
+        <p>
+            I also put a lot of effort into decoupling systems in this game. This posed a challenge while developing systems such as UI, animation, and sound, so I decided to use an event based system using the observer pattern. When a Lemming's physics script determines that it has died, it fires an event that these systems listen to and update depending on which function it is listening to.
+        </p>
+        <p>
+            While developing this game, I also took the time to become more familiar with additive scene loading and Unity's mixer system, which proved useful for tracking persistent objects between levels, such as the scene/UI manager or settings across the game. Now that I am more familiar with these systems, I hope to make better use of them in future projects as it proved particularly useful! If I ever work further on it, it will likely be to test certain uses of UI - I never needed to add a second page to the level select screen, so something as simple as that could be done here, if I don't just do it in a future project.
+        </p>
+    </div>
+
+    <div class="section-a">
+        <p>
+            The following is a brief gameplay video of a few levels I created for the game!
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube.com/embed/-YDG0fr640Q" title="CLEMMINGS - A Simple 3D Lemmings Clone (Build 1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>Social Media:</p>
+        <p><a href="https://www.linkedin.com/in/emily-perry-a72324223/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
+        <p class="copyright">
+            &copy; emluperry. 
+            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
+
+</body>
+</html>
