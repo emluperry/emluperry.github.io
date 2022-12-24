@@ -26,44 +26,35 @@
 
     <div class="section-a">
         <div class="imageBox">
-            <img class="longImage" src="../images/pic01.jpg" />
-            <h1>PROJECT TITLE</h1>
-            <h3>TOOLS/LANGUAGE || COURSEWORK/PERSONAL</h3>
-            <h5>BRIEF PROJECT DESC.</h5>
+            <img class="longImage" src="../images/yotd2.gif" />
+            <h1>YEAR OF THE DRAGON</h1>
+            <h3>C# & Unity || COURSEWORK</h3>
+            <h5>A modern fantasy action game inspired by The Legend of Zelda</h5>
         </div>
     </div>
 
     <div class="section-b">
-        <div class="flex-container">
-            <div class="smallNav">
-                <a class="smallNavLink" href="">DOWNLOAD (Windows)</a>
-                <a class="smallNavLink" href="">WEBSITE</a>
-                <a class="smallNavLink" href="">GITHUB REPOSITORY</a>
-            </div>
-            <div class="smallDescText">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh felis, convallis non volutpat interdum, luctus ac purus. Fusce sed nisi quis magna venenatis sollicitudin a eget ex. Mauris rhoncus dui a justo egestas, id feugiat enim eleifend.
-                </p>
-            </div>
-        </div>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh felis, convallis non volutpat interdum, luctus ac purus. Fusce sed nisi quis magna venenatis sollicitudin a eget ex. Mauris rhoncus dui a justo egestas, id feugiat enim eleifend. Fusce cursus id lacus sed dictum. Aenean bibendum eros ligula, eu interdum dolor consectetur rutrum. Nullam ac vehicula leo. Integer consectetur placerat neque, suscipit feugiat erat. Nam lacus nulla, fringilla id mauris a, tincidunt rutrum neque. Aliquam laoreet nibh libero, eu egestas nulla maximus dictum. Phasellus semper in nisl a faucibus. Aenean quis nulla mi. Integer sit amet tortor sapien. Nulla facilisi. Duis sit amet purus id nibh maximus dictum sit amet eget velit. Aenean facilisis facilisis pulvinar. Phasellus tellus leo, facilisis sit amet commodo eu, sollicitudin nec mauris.
+            For the first semester of my Game Development module, I was instructed to make any game that is topdown. I knew early on that I wanted to make an interesting game based around the idea of the player only having one tool or weapon that evolves over the course of the game, which ended up being the chain whip weapon. I wanted to take inspriation from games I enjoy, such as The Legend of Zelda, without requiring myself to design too many unique items or extra mechanics on top of that.
         </p>
         <div class="imageBox">
-            <img class="longImage" src="../images/pic02.jpg" />
-            <p>This is a caption.</p>
+            <img class="longImage" src="../images/yotd1.gif" />
+            <p>The player attacks enemies in the level using their weakness, and the standard attack.</p>
         </div>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh felis, convallis non volutpat interdum, luctus ac purus. Fusce sed nisi quis magna venenatis sollicitudin a eget ex. Mauris rhoncus dui a justo egestas, id feugiat enim eleifend. Fusce cursus id lacus sed dictum. Aenean bibendum eros ligula, eu interdum dolor consectetur rutrum. Nullam ac vehicula leo. Integer consectetur placerat neque, suscipit feugiat erat. Nam lacus nulla, fringilla id mauris a, tincidunt rutrum neque. Aliquam laoreet nibh libero, eu egestas nulla maximus dictum. Phasellus semper in nisl a faucibus. Aenean quis nulla mi. Integer sit amet tortor sapien. Nulla facilisi. Duis sit amet purus id nibh maximus dictum sit amet eget velit. Aenean facilisis facilisis pulvinar. Phasellus tellus leo, facilisis sit amet commodo eu, sollicitudin nec mauris.
+            In this project, I made use of Unity's NavMesh system for the enemies, which can chase after the player when it comes within a certain distance of them, or wander idly about sections of the level. These enemies also have different behaviour for attacking once close enough. I only implemented a slime in the end, which can throw itself at the player, but these slimes can have an "affinity" of magic that determines the type of damage they deal, and if they are weak to another type of magic. The player can change the magic they use to counter this, however it costs the player magic.
+        </p>
+        <p>
+            I also spent a lot of time playing around with Unity's force and collision systems within the Physics engine. The player and enemies move using forces, but in particular I wanted to focus on the physics for the chainwhip, which would not move like a traditional entity and be tethered to the player, while having a limited reach. I considered using a joint component to attach the player and chain whip, but decided against this in the end as I did not want forces on the chainwhip to affect the player's body, though I did somewhat want forces on the player to affect the chainwhip. In the end, my solution was to treat the objects as two different objects that cannot collide each other, with the weapon head having a reference to the current position of the player, allowing it to return to the player after being fired, and allowing the chain to stay relative to both. I also programmed the chainwhip to automatically return if it were to move closer to the player anyway, but I may revisit this in future as it does not feel particularly natural, especially while moving and attacking forward at the same time. 
         </p>
     </div>
 
     <div class="section-a">
         <p>
-            This section contains a video to watch! Here is some more dummy text.
+            The following is a gameplay demo video for everything currently implemented in the game!
         </p>
         <div class="imageBox">
-            <video controls><source src="../videos/pacman.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube.com/embed/zs9z4Wn5u3c" title="Year of the Dragon - A Simple Unity Action Game (Build 1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
