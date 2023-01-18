@@ -144,6 +144,10 @@ nav{
     margin: auto;
 }
 
+.section-a .portfolioHighlights h3 {
+    text-align: center;
+}
+
     .section-a .portfolioHighlights a {
         text-decoration: none;
     }
