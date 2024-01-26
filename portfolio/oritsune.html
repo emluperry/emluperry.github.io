@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="pageTopNav">
+            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
+            <a class="rightAlign" href="../contact.html">SOCIALS</a>
+            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
+            <a class="rightAlign" href="../about.html">ABOUT</a>
+            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="../images/oritsune4.png" />
+            <h1>ORITSUNE</h1>
+            <h3>C# & UNITY || COURSEWORK</h3>
+            <h5>A Okami inspired 3D adventure game with a card-based combat system.</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <p>
+            For my second semester of Game Development, the prompt was to create any game using any engine of my choice. I wanted this project to demonstrate skills that I'm proud of,
+            so I decided to stick with Unity and C# while I focused on learning to use Unreal in another module. I brainstormed a few different ideas, but I went into the project knowing that
+            I wanted to do something in a 3D space, and eventually narrowed my options down to what would become Oritsune.
+        </p>
+        <p>
+            I wanted to put more time into the concept and planning stage to ensure I knew what I was trying to acomplish over that semester, so I came up with the basic control scheme
+            and made a priority list for a few different mechanic ideas. The original idea was for the player character, a kitsune, to earn its nine tails by completing levels in the game.
+            Each tail would grant a new ability, with the character's starting tail being the card based combat system. While I was initially looking at deck-builders such as Slay the Spire
+            and tabletop deck-builders, I ended up taking more inspiration from Kingdom Hearts: Chain of Memories, opting for a simpler card system in a 3D arena similar to Okami.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/oritsune1.gif" />
+            <p>A brief run of the first half of the tutorial area.</p>
+        </div>
+        <p>
+            I designed the basic concept for the main character pretty early, using a retextured fox model I purchased from Synty as the main character, which I would later create a few
+            extra animations for by manipulating joints within Unity's animator. Where I needed any complex animations, such as attacking, I used the spirit orb around its neck to simplify
+            the work. I ended up creating only two scenes, one tutorial area and one hub world, which I built up using a combination of Synty assets and Unity's terrain painter. With more
+            time to spend on the project, I would've tried to populate these areas further, as the most that could be found in the main level were a few enemies and card collectables. However,
+            I had a clear vision for what I wanted to do with the starting area, so I looked into creating materials for the spirits that would make them appear bright, and attached a light
+            to each in-engine to create a sort of mystical scene. I don't intend on getting a job in industry as a designer or an artist, but I do enjoy this step quite a bit.
+        </p>
+    </div>
+
+    <div class="section-c">
+        <div class="imageBox">
+            <img class="longImage" src="../images/oritsune2.gif" />
+        </div>
+    </div>
+
+    <div class="section-a">
+        <p>
+            The bulk of technical work went towards the battle system. I ended up designing three different cards for use in the game, one for attacking, one for shields, and
+            one for healing. Cards were based on the scriptable object system, having a type and a power which would determine the amount of damage healed, defended, or dealt. The player
+            would get five cards for each turn, which they can use or discard as they choose, after which a new hand is drawn. Before a battle, the player can customise their deck as they
+            wish.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/oritsune3.gif" />
+            <p>Dev screenshot - a slowed demonstration of enemy rabbit AI.</p>
+        </div>
+        <p>
+            Enemies also utilised scriptable objects as part of their state machine. I designed two enemies, but was only able to implement the rabbit enemy before the project was due to be
+            handed in. The rabbit enemy would swap between three simple states - chasing the player to get in range, attacking the player, then attempting to run away and evade further attacks.
+            It would routinely swap between chasing and evading as well. Each type of action would be determined by a type of action scriptable object. State machines and transitions would also
+            be implemented as scriptable objects.
+        </p>
+        <p>
+            Also worthy of note, I used this project to improve on some of the generic systems developed in both Game Development Semester 1 and Game Engine Programing Semester 1, such as
+            the UI and Scene Management, as well as developing an Input Manager based on Unity's new input system to spread inputs from one player component across multiple systems.
+        </p>
+    </div>
+
+    <div class="section-b">
+        <p>
+            The following is a video demonstrating the gameplay developed.
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube.com/embed/xvZUfKQ4KDI" title="Ori-tsune - A 3D, Card-based Action Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>Social Media:</p>
+        <p><a href="https://www.linkedin.com/in/emily-perry-a72324223/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
+        <p class="copyright">
+            &copy; emluperry.
+            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
+
+</body>
+</html>

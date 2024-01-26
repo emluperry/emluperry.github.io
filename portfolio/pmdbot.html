@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="topnav" id="pageTopNav">
+            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
+            <a class="rightAlign" href="../contact.html">SOCIALS</a>
+            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
+            <a class="rightAlign" href="../about.html">ABOUT</a>
+            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="../images/pmd1.png" />
+            <h1>PMDBot</h1>
+            <h3>JAVASCRIPT & DISCORD || PERSONAL</h3>
+            <h5>A Discord Bot Game inspired by Pokemon Mystery Dungeon</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <p>
+            A very different project to others on my portfolio. This project was my second foray into developing for discord, and my first using javascript.
+            <br />
+            <br />
+            This project started as a glorified calculator for a Pokemon Mystery Dungeon themed tabletop roleplay, hosted over Discord. It was originally intended to be used to
+            generate random encounters and calculate the effects of attacks, but the project grew into something much larger than I'd originally expected, spanning multiple
+            concepts as time went on, as I had originally planned to do all of the calculations by hand. The first concept is from back in November, when I was still considering using
+            standard playing cards to determine the random events!
+            <br />
+            <br />
+            Once I realised that I could easily achieve everything I wanted in the time given, I ended up skewing to a system that more closely resembled calculations present in the main
+            series of games, repurposing speed to influence the order of attacks. This came with its own host of problems as well, since I would be using set levels for my players Pokemon
+            and hadn't had the chance to fully playtest enemies and their movesets, which meant encounters could be far too easy or surprisingly difficult.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/pmd2.png" />
+            <p>An example of what going into a dungeon is like.</p>
+        </div>
+        <p>
+            To keep things simple, and because it fit for the context, each player would have three different Pokemon slots at level 10, 30 and 50, ith each generally representing
+            a different evolution for their Pokemon where possible. Each of these Pokemon had predetermined movesets as well, since implementing experience and moveset choice was
+            far beyond what I'd set out to do. At certain points in the campaign, I could cause someone's Pokemon to level up or evolve.
+            <br />
+            <br />
+            The nature of things meant there were actually a lot of people involved, that might have wanted to do things while I wasn't around or awake. I'm pretty proud of my solution for
+            this, which was to make dungeon exploration purely user driven, provided all works well. Players could type a discord command into a given dungeon channel, tag in the other players
+            that would be joining them on an exploration, and the bot would start randomly generating 'rooms' in the form of cards, similar to the original playing card concept. Each 'card' had
+            its own chance of showing up, and could show up multiple times.
+            <br />
+            <br />
+            Cards would determine if the players ran into wild Pokemon, items, trainers, a shop, a monster house, or a way to
+            advance, all of which would be controlled using buttons provided by the discord API. As a secondary failsafe, I knew I wouldn't be able to test for every situation before my deadline,
+            and errors such as null references would shut down the entire bot. So I also made it so that the bot would track a group's progress in a dungeon, saving the participants, their
+            status, and their progress within a dungeon. The only thing that was not tracked were items, as these were a global bag for anyone to use, and I did not intend on putting more work into
+            the inventory with the scope of the project as it was.
+        </p>
+    </div>
+
+    <div class="section-a">
+        <p>
+            Battles, random encounters or boss encounters setup by myself, would run in their own thread within discord, as it would generate a <i>lot</i> of messages. This was
+            necessary to get certain information across, and to allow different players to choose between attacking, using items, or passing their turn. Rather ambitiously, my original
+            intention for 'passing' a turn would be to allow for actions outside of the strict battle system, but this didn't quite come to fruition, and so the option was rarely used!
+            Every turn, the bot would ping the associated player's discord tag and display the menu, and the player would pick an action, which the bot would then calculate. The bot could
+            account for everything from damage, stats, type effectiveness, status effects, abilities, stat boosts, and weather or field conditions.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="../images/pmd3.png" />
+            <p>A setup encounter with a boss Pokemon! Looks like a battle between Mega Absol (<a href="https://caitemis-art.tumblr.com/">Caitemis</a>) and... Primal Dialga?? (<a href="https://twitter.com/Just_Tr4sh">Garbage</a>)</p>
+        </div>
+        <div class="imageBox">
+            <img class="longImage" src="../images/pmd4.png" />
+            <p>Mega Absol powered up! (<a href="https://twitter.com/Ernmuffin">Emmuffin</a>)</p>
+        </div>
+        <p>
+            Being knocked out of a battle during a dungeon would knock that player out of the exploration if other players don't have or choose not to give them a reviver seed.
+            Outside of dungeons, the players would also be able to browse items at the kecleon shop, which had a set of different items for each day of the session, predetermined by myself.
+            <br />
+            <br />
+            A lot of time for this bot went into getting the special effects of moves and abilities to work. One of the difficulties with developing this sort of system in javascript of all
+            languages is the lack of classes, and by the time I realised that I could start looking into Typescript, I was running out of time to develop the bot and had already found a way
+            around things by simply implementing repeated functions across various abilities as if I were just overriding certain base functions.
+            <br />
+            Using Sequelize as my database of choice, I ended up porting data for around 214 moves, 86 abilities, 198 different instances of various Pokemon, including wild Pokemon for 10
+            different dungeons. I also implemented 24 items in the end, mainly berries and status causing seeds.
+        </p>
+    </div>
+
+    <div class="section-b">
+        <p>
+            There's a lot I could've done to improve this project, in hindsight, but as a project developed over the course of 8 months, alongside other coursework and responsibilities (such
+            as planning the campaign!) I'm pretty happy with how it turned out. In an ideal world, I'd implement random shop stocks, requests, add experience, levelling up, and held items,
+            and maybe implement a better way of setting up various items and dungeons, while also improving the codebase to be a little more maintainable. I don't intend on working on this
+            project further, as I don't have any real need to, but it was great fun, and I enjoyed testing the limits of what I could do. (If I could figure out why the buttons would occasionally
+            stop working for myself and my players seemingly at random, I'd love to know that too!)
+            <br />
+            <br />
+            Naturally, all copyrights go to the Pokemon Company and Chunsoft for the franchise, Pokemon, and sprites from both Pokemon Mystery Dungeon and Pokemon Ranger, which I used for types.
+            I'd also like to thank the efforts of the <a href="https://sprites.pmdcollab.org/">pmd sprite repository</a> and the community as a whole for all of the custom visual assets created
+            for newer Pokemon in the series, many of which were used during the campaign and haven't been shown off here!
+        </p>
+    </div>
+
+    <footer>
+        <p>Social Media:</p>
+        <p><a href="https://www.linkedin.com/in/emily-perry-a72324223/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
+        <p class="copyright">
+            &copy; emluperry.
+            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
+    </footer>
+
+</body>
+</html>
