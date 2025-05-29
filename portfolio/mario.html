@@ -5,28 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMILY PERRY</title>
-    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+    <link rel="icon" type="image/x-icon" href="/sdpicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
 </head>
 <body>
     <nav>
-        <div class="topnav" id="pageTopNav">
-            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
-            <a class="rightAlign" href="../contact.html">SOCIALS</a>
-            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
-            <a class="rightAlign" href="../about.html">ABOUT</a>
-            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+        <div id="navBar"></div>
     </nav>
 
     <div class="section-a">
         <div class="imageBox">
-            <img class="longImage" src="../images/mario1.jpg" />
+            <img class="longImage" src="/images/mario1.jpg" />
             <h1>MARIO RECREATION</h1>
             <h3>C++ & SDL || COURSEWORK</h3>
             <h5>A simple recreation of the first two levels of Super Mario Bros for the NES.</h5>
@@ -35,18 +28,18 @@
 
     <div class="section-b">
         <p>
-            A recreation of the first two levels of the Super Mario Bros NES game, created over the course of my second semester while developing my coding skills using SDL. 
+            A recreation of the first two levels of the Super Mario Bros NES game, created over the course of my second semester while developing my coding skills using SDL.
             The game features functioning copies of the first two levels, with enemies that update while onscreen and die when stomped by the player or hit by a POW block shockwave. Only a few features are missing from the original game.
             <br />
-            Levels are generated using a tile system, in which characters in a text file correlate to a block type, which is then displayed on screen. It uses a similar system for enemy generation, 
-            able to place different enemies in a grid based on the character used. To complement this, the background scrolls. 
-            The appearance of textures in level 1 and 2 are different, and able to be set by changing one variable. 
+            Levels are generated using a tile system, in which characters in a text file correlate to a block type, which is then displayed on screen. It uses a similar system for enemy generation,
+            able to place different enemies in a grid based on the character used. To complement this, the background scrolls.
+            The appearance of textures in level 1 and 2 are different, and able to be set by changing one variable.
         </p>
         <div class="imageBox">
-            <img class="longImage" src="../images/mario2.jpg" />
+            <img class="longImage" src="/images/mario2.jpg" />
         </div>
         <p>
-            All moving entities in the game make use of inheritance and polymorphism from a base Character class, which is inherited by both the players (Mario and Luigi) and all enemies, such as Koopas and Goombas. 
+            All moving entities in the game make use of inheritance and polymorphism from a base Character class, which is inherited by both the players (Mario and Luigi) and all enemies, such as Koopas and Goombas.
             Similarly, all tiles in the game inherit from one Tile class, with child classes as Bricks, POW Blocks and Concrete which have different properties to determine whether or not they are breakable.
             <br />
             Breaking blocks and defeating enemies awards points to the player, which are tracked on the top left of the screen.
@@ -58,18 +51,18 @@
             Video needs updating: for a work in progress video, see below.
         </p>
         <div class="imageBox">
-            <video controls><source src="../videos/wipMario.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <video controls><source src="/videos/wipMario.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
     </div>
 
-    <footer>
-        <p>Social Media:</p>
-        <p><a href="https://www.linkedin.com/in/emluperry" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
-        <p class="copyright">
-            &copy; emluperry. 
-            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
 
 </body>
 </html>
