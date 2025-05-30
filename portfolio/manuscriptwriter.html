@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="/sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="navBar"></div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="/images/msw/msw-header.png" />
+            <h1>MANUSCRIPTWRITER</h1>
+            <h3>C# & Unity || DISSERTATION</h3>
+            <h5>An extensible narrative scripting language in human readable English for non-technical game writers.</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <div class="flex-container">
+            <div class="smallNav">
+                <p class="smallNavLink smallDescText"><b>Repositories</b></p>
+                <a class="smallNavLink" href="https://github.com/emluperry/Manuscriptwriter-CSharp">Github - C# Backend</a>
+                <a class="smallNavLink" href="https://github.com/emluperry/Manuscriptwriter-Unity">Github - Unity</a>
+                <p class="smallNavLink smallDescText"><b>Other Files</b></p>
+                <a class="smallNavLink" href="https://github.com/emluperry/Manuscriptwriter-Unity/blob/main/Manu-Scriptwriter%20Testing%20Manual%20Rev-1.pdf">Testing Manual</a>
+                <a class="smallNavLink" href="/files/p014084l_GDEV_dissertation.pdf">Dissertation</a>
+            </div>
+            <div class="smallDescText">
+                <p>
+                    The backend for Manuscriptwriter is not tied to any particular engine. It makes use of reflection, so may be subject to platform restrictions.
+                </p>
+                <p>
+                    There are plans to provide plugin support for other commercial engines once the backend is stable enough.
+                </p>
+                <p>
+                    My bachelors dissertation is available to read here, alongside a separate copy of the testing manual provided for the methodology.
+                </p>
+            </div>
+        </div>
+        <p>
+            Manuscriptwriter is an interpreted narrative scripting language with the extensibility to call functions written in C# as sentences defined by attributes. The Unity plugin currently supports dialogue, "barks", simple emotions, and simple camera movements by default,
+            limited by time constraints when working on the project as my dissertation in my final year of university. The system interprets plain text files as scripts using a custom language
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="/images/msw/msw-preview.png" />
+            <p>A preview of some of the dialogue functionality, featuring assets by Kenny.nl.</p>
+        </div>
+        <p>
+            Manuscriptwriter was originally created as an artefact to test the hypothesis of my dissertation - is natural language scripting easier for non-technical writers to understand and write than other scripting formats?
+            I found, from a small sample of testers, that most of the group enjoyed using the system and found it intuitive to use, however others had issues with the spelling requirements and rigidity of the system overall.
+            Ultimately, I concluded that more research is needed on a larger sample size with less of a bias towards myself, and that the artefact itself needed further development to improve usability.
+        </p>
+    </div>
+
+    <div class="section-a">
+        <p>
+            For a technical breakdown of this project in more detail, see the video below.
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube-nocookie.com/embed/taQK2Ox9_zM" title="Manu-Scriptwriter Technical Breakdown (V1)" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
+
+</body>
+</html>
