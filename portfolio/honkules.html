@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="/sdpicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="navBar"></div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="/images/honkules/honkules-banner.png" />
+            <h1>HONKULES: FOWL RESURRECTION</h1>
+            <h3>Unreal Engine 5, Blueprint, C++ || GROUP COURSEWORK</h3>
+            <h5>A quackers arena roguelike, created as part of a 28 person collaborative group project.</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <div class="flex-container">
+            <div class="smallNav">
+                <a class="smallNavLink" href="https://feludus.itch.io/honkules-fowl-resurrection">ITCH.IO</a>
+                <a class="smallNavLink" href="https://github.com/Cloudbound-Games-Collab25-G28/Kill-For-The-Thrill">GITHUB REPOSITORY</a>
+            </div>
+            <div class="smallDescText">
+                <p>
+                    Honkules currently only supports Windows.
+                </p>
+                <p>
+                    This game was produced as part of my Senior Collaborative Module, in which I acted as the Tech Lead for a team of 8 programmers and technical designers - part of an overall team of 28 students.
+                    All art assets in this project were done by the art and concept art teams - a full credits list can be found on the itch.io page.
+                </p>
+            </div>
+        </div>
+        <p>
+            As Tech Lead, I was responsible for managing the GitHub repository and project builds, as well as for collaborating with other leads (Production, Design, Art and Concept Art) to ensure that elements of the game were implemented correctly and to ensure that
+            functionality was delivered to a reasonable standard at the deadlines provided. I hosted bi-weekly scrums on Mondays and Fridays, helped the production lead with weekly progress presentations, and posted "daily" updates whenever I worked on the project to ensure
+            that others on the team knew what was being worked on and what was expected of them. When setting up the GitHub repository, I also created guides to using GitHub for students who had not been taught to use source control in the past.
+            I tried to make weekly builds after the playtest, structuring the repository using GitFlow to ensure that new changes and features from members of the team did not break an existing stable build, allowing me to ensure we had a stable build to demonstrate at the start of each week.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="/images/honkules/honkules-mainmenu.png" />
+            <p>The final main menu screen, which I put together in Blueprint.</p>
+        </div>
+        <p>
+            Aside from delegating tasks to other members of the tech team, my primary responsibilities in terms of functionality was audio programming for music, sound effects, and the voice over, as well as most of the user interface programming (with some exceptions).
+            While I had some experience with Unreal Engine from tutorials and other coursework, this was my first time touching audio systems within Unreal Engine at any depth greater than what was taught during the Procedural Content Generation Module - from which, I took
+            knowledge of MetaSounds to make sound effects have slight variations on sounds to reduce audio fatigue. I spent a lot of time with our UI artist(s) and audio lead to implement the different sounds and interfaces to the right standard, using widget blueprints to setup
+            and arrange elements by making use of anchoring.
+            <br />
+            <br />
+            I tried to make use of C++ where I could at the start of the project, primarily altering the player and creating various C++ components for various actors, as well as setting up C++ scripts for various user interface components such as the health component and health bar.
+            However, I did end up needing to make use of Blueprint in the end, at the request of others on the team, as they were unfamiliar with C++ with Unreal Engine. Despite this, I tried to keep my logic as simple and efficient as I could, or ensured that any C++ functions could be
+            overwritten as Blueprint Native Events if necessary.
+        </p>
+    </div>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="/images/honkules/honkules-boss.png" />
+            <p>A screenshot in-engine with a manipulated camera, framing one of the Minotaur's attacks.</p>
+        </div>
+        <p>
+            In the leadup to the deadline, I also spent a lot of time polishing up some of the game's assets, taking the models, textures and VFX provided by the art team and ensuring that these were correctly implemented into the game for the final build. During this period of time,
+            I also made sure to fix any bugs I found during playtesting.
+        </p>
+    </div>
+
+    <div class="section-b">
+        <p>
+            A full clip of gameplay can be viewed below.
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-Y5JXQI4yOk" title="Honkules: Fowl Resurrection - Full Gameplay" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
+
+</body>
+</html>
