@@ -5,28 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMILY PERRY</title>
-    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
 </head>
 <body>
     <nav>
-        <div class="topnav" id="pageTopNav">
-            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
-            <a class="rightAlign" href="../contact.html">SOCIALS</a>
-            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
-            <a class="rightAlign" href="../about.html">ABOUT</a>
-            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+        <div id="navBar"></div>
     </nav>
 
     <div class="section-a">
         <div class="imageBox">
-            <img class="longImage" src="../images/oritsune4.png" />
+            <img class="longImage" src="/images/oritsune4.png" />
             <h1>ORITSUNE</h1>
             <h3>C# & UNITY || COURSEWORK</h3>
             <h5>A Okami inspired 3D adventure game with a card-based combat system.</h5>
@@ -46,7 +39,7 @@
             and tabletop deck-builders, I ended up taking more inspiration from Kingdom Hearts: Chain of Memories, opting for a simpler card system in a 3D arena similar to Okami.
         </p>
         <div class="imageBox">
-            <img class="longImage" src="../images/oritsune1.gif" />
+            <img class="longImage" src="/images/oritsune1.gif" />
             <p>A brief run of the first half of the tutorial area.</p>
         </div>
         <p>
@@ -61,7 +54,7 @@
 
     <div class="section-c">
         <div class="imageBox">
-            <img class="longImage" src="../images/oritsune2.gif" />
+            <img class="longImage" src="/images/oritsune2.gif" />
         </div>
     </div>
 
@@ -73,7 +66,7 @@
             wish.
         </p>
         <div class="imageBox">
-            <img class="longImage" src="../images/oritsune3.gif" />
+            <img class="longImage" src="/images/oritsune3.gif" />
             <p>Dev screenshot - a slowed demonstration of enemy rabbit AI.</p>
         </div>
         <p>
@@ -97,14 +90,14 @@
         </div>
     </div>
 
-    <footer>
-        <p>Social Media:</p>
-        <p><a href="https://www.linkedin.com/in/emluperry/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
-        <p class="copyright">
-            &copy; emluperry.
-            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
 
 </body>
 </html>

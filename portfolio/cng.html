@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMILY PERRY</title>
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="navBar"></div>
+    </nav>
+
+    <div class="section-a">
+        <div class="imageBox">
+            <img class="longImage" src="/images/cng/cng-banner.png" />
+            <h1>CRAB N' GRAB</h1>
+            <h3>C# & Unity || COURSEWORK</h3>
+            <h5>A simple number based puzzle game for Android using mobile packages.</h5>
+        </div>
+    </div>
+
+    <div class="section-b">
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube-nocookie.com/embed/S8MVKNWLjts" title="Crab n' Grab - Gameplay Overview" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p>
+            The primary goal of Crab n' Grab was to investigate different techniques used within mobile development, designing games for handheld devices and taking into account the different techniques used within mobile games for retention and monetisation purposes.
+            <br />
+            To this end, the primary purpose of Crab n' Grab was to investigate how to effectively design and create a mobile game using Unity and C#, using this information. I made use of the legacy advertising package, learned to use haptics, and set up systems to
+            save game data and settings effectively. I also spent time looking into profiling using the Unity Analyser and Android Logcat to monitor the performance of the game and ensure that it would run on mobile without issues, and without causing the battery to heat up.
+        </p>
+        <div class="imageBox">
+            <img class="longImage" src="/images/cng/cng-horizontal.png" />
+            <p>Crab n' Grab was developed from the wireframe and prototyping phase, down to a standard which could be ready for release.</p>
+        </div>
+        <p>
+            As part of my work on Crab n' Grab, I put together a set of assemblies within Unity which aren't coupled, making it easier to reuse existing code for other projects. I wanted to do this during this project as I realised that, throughout my time
+            at university, I had spent a lot of time recreating the same or similar systems as I learned new or improved methods in different projects. Unfortunately, since I felt that I had improved a lot since the last time I setup boilerplate code, I decided
+            to start from scratch, using assemblies within Unity and ensuring that dependencies between each system were limited.
+        </p>
+    </div>
+
+    <div class="section-a">
+        <p>
+            The following video discusses the technical implementation in more detail.
+        </p>
+        <div class="imageBox">
+            <iframe class="longImage" width="560" height="315" src="https://www.youtube-nocookie.com/embed/6GfBMoecnP8" title="Crab n&#39; Grab - Technical Breakdown" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="imageBox">
+            <img class="longImage" src="/images/cng/cng-screenshot.png" />
+            <p>While not everything from the prototyping phase was kept in the final product submitted for the module, I managed to get a working minimum viable product in the 8 weeks allotted, while working on my collaborative module at the same time.</p>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
+
+</body>
+</html>

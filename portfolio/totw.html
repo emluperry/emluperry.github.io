@@ -5,28 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EMILY PERRY</title>
-    <link rel="icon" type="image/x-icon" href="../sdpicon.ico">
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/includeHTML.js"></script>
 </head>
 <body>
     <nav>
-        <div class="topnav" id="pageTopNav">
-            <a class="logo" href="../index.html"><img src="../images/spottydogProductions40x40.png" alt="" /></a><a href="../index.html">HOME</a>
-            <a class="rightAlign" href="../contact.html">SOCIALS</a>
-            <a class="rightAlign" href="../portfolio.html">PORTFOLIO</a>
-            <a class="rightAlign" href="../about.html">ABOUT</a>
-            <a href="javascript:void(0);" class="icon leftLink" onclick="unfurlTopnav()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+        <div id="navBar"></div>
     </nav>
 
     <div class="section-a">
         <div class="imageBox">
-            <img class="longImage" src="../images/totwLONG.png" />
+            <img class="longImage" src="/images/totwLONG.png" />
             <h1>TAILS OF THE WILD</h1>
             <h3>C# & UNITY || PERSONAL</h3>
             <h5>An infinite top-down rogue-like made between 2019 and 2020</h5>
@@ -42,41 +35,41 @@
             </div>
         </div>
         <div class="imageBox">
-            <img class="longImage" src="../images/totwMap.png" />
+            <img class="longImage" src="/images/totwMap.png" />
             <p>A generated level, viewed from the Unity inspector.</p>
         </div>
         <p>
-            In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven. 
-            The game determines a random number of rooms, R, to generate, and continues to generate them in a limited space, giving them a random width, height, and number of door tiles with each attempt. 
-            It ensures that these rooms do not overlap, nor that they escape the level boundary. Then, it randomly shuffles these rooms, generating corridors, C, between them until all rooms are connected and inactive. 
-            All generation is initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in Unity, which are each given a random texture for variety. 
+            In particular, I focused on the random level generation aspect, inspired by the random aspects of tabletop games such as Gloomhaven.
+            The game determines a random number of rooms, R, to generate, and continues to generate them in a limited space, giving them a random width, height, and number of door tiles with each attempt.
+            It ensures that these rooms do not overlap, nor that they escape the level boundary. Then, it randomly shuffles these rooms, generating corridors, C, between them until all rooms are connected and inactive.
+            All generation is initially completed as an array of strings, which is then used to actually build the level using the wall and floor prefabs created in Unity, which are each given a random texture for variety.
             On top of this, enemies, E, and items, I, are spawned in the level to attack the player, and to heal the player's hunger or health. Finally, the player itself, P, is given a starting position that does not overlap with an enemy.
         </p>
     </div>
 
     <div class="section-a">
         <div class="imageBox">
-            <img class="longImage" src="../images/totwEnemies.png" />
+            <img class="longImage" src="/images/totwEnemies.png" />
             <p>Enemies chasing the player</p>
         </div>
         <p>
-            This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and attack the player, or run away to random tiles in the map depending on the random behaviour chosen. 
-            The enemy determines where to move using a reference to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue to generate as the level 
+            This system is based on a separate coordinate system which allows enemies to use a variant of an A* search algorithm to track down and attack the player, or run away to random tiles in the map depending on the random behaviour chosen.
+            The enemy determines where to move using a reference to the whole map as a string. After a set amount of steps, an enemy reevaluates their next move by randomly changing their behaviour. Enemies would continue to generate as the level
             continues, away from the player, until they eventually find them to attack.
         </p>
         <div class="imageBox">
-            <video controls><source src="../videos/totw.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+            <video controls><source src="/videos/totw.mp4" type="video/mp4">Your browser does not support the video tag.</video>
         </div>
     </div>
 
-    <footer>
-        <p>Social Media:</p>
-        <p><a href="https://www.linkedin.com/in/emluperry/" class="linkIcon fa fa-linkedin"></a> <a href="https://twitter.com/emluperry" class="linkIcon fa fa-twitter"></a> <a href="https://github.com/emluperry" class="linkIcon fa fa-github"> </a></p>
-        <p class="copyright">
-            &copy; emluperry. 
-            Background Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </p>
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+
+        includeHTML("/components/header.html", "navBar");
+        includeHTML("/components/footer.html", "footer");
+
+    </script>
 
 </body>
 </html>
