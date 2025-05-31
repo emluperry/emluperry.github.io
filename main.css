@@ -41,7 +41,7 @@ nav{
     max-width: 1250px;
     margin: auto;
     border-radius: 15px 15px 5px 5px;
-    height: 60px;
+    height: 50px;
 }
 
     .topnav .container {
@@ -56,7 +56,7 @@ nav{
         float: left;
         display: inline-block;
         color: var(--c_text);
-        padding: 4px 16px 4px 16px;
+        padding: 0px 16px;
         text-align: center;
         text-decoration: none;
         font-size: 17px;
@@ -110,7 +110,9 @@ nav{
     @media screen and (max-width: 600px){
         .topnav.responsive{
             position: relative;
-            height:auto;
+            height: auto;
+            display: grid;
+            grid-auto-rows: 50px;
         }
         .topnav.responsive a.icon{
             position: absolute;
