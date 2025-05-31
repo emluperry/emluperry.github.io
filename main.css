@@ -4,9 +4,9 @@
     --c_section_b: #D0F0F3;
     --c_heading_bg: #70abb5;
     --c_footer_bg: #062B2F;
-    --c_navbar_bg: #31CDDA;
+    --c_navbar_bg: #088fa3;
     --c_navbar_hover: #B6DEE5;
-    --c_navbar_active: #088fa3;
+    --c_navbar_active: #31CDDA;
     --c_text: #000000;
     --c_footer_text: #FFFFFF;
 }
@@ -320,7 +320,7 @@ footer a {
 }
 
     .section-b > .flex-container.skill > p {
-        background-color: var(--c_navbar_hover);
+        background-color: var(--c_navbar_active);
         margin: 5px 10px 5px 10px;
         padding: 10px;
         flex-grow: 1;
