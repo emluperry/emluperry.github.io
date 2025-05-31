@@ -1,19 +1,31 @@
-﻿/*COLOURS:
-    #314A66 - DARK BLUE FOR BACKGROUND
-    #8CD2D3 - LIGHTER MUTED TEAL FOR CONTENT (SECTION A)
-    #B6DEE5 - NAVBAR LINK HIGHLIGHT
-    #3AE1E7 - NAVBAR LINK ACTIVE HIGHLIGHT
-    #66C6D0 - MUTED TEAL FOR NAVBAR
-    #0d1926 - DARK BLUE FOOTER
-    #8CD2DE - section a colour
-    #9fc3c9 - section b colour
-    #70abb5 - dark blue tabs
-*/
+﻿:root {
+    --c_bg: #11666D;
+    --c_section_a: #A4E0E6;
+    --c_section_b: #D0F0F3;
+    --c_heading_bg: #70abb5;
+    --c_footer_bg: #062B2F;
+    --c_navbar_bg: #31CDDA;
+    --c_navbar_hover: #B6DEE5;
+    --c_navbar_active: #088fa3;
+    --c_text: #000000;
+    --c_footer_text: #FFFFFF;
+}
 
 body {
-    background-color: #314A66;
-    background-image: url("images/background.jpeg");
+    background-color: var(--c_bg);
+    background-image: url("images/background.jpg");
+    background-size: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 /*Navigation*/
@@ -24,40 +36,61 @@ nav{
 }
 
 .topnav {
-    background-color: #66C6D0;
+    background-color: var(--c_navbar_bg);
     overflow: hidden;
     max-width: 1250px;
     margin: auto;
     border-radius: 15px 15px 5px 5px;
+    height: 60px;
 }
+
+    .topnav .container {
+        place-content: center;
+        top: 0;
+        bottom: 0;
+        width: auto;
+        height: 100%;
+    }
 
     .topnav a {
         float: left;
-        display: block;
-        color: #000;
+        display: inline-block;
+        color: var(--c_text);
+        padding: 4px 16px 4px 16px;
         text-align: center;
-        padding: 15px 16px;
         text-decoration: none;
         font-size: 17px;
     }
 
         .topnav a:hover {
-            background-color: #B6DEE5;
-            color: #000;
+            background-color: var(--c_navbar_hover);
+            color: var(--c_text);
         }
 
         .topnav a.active {
-            background-color: #3AE1E7;
-            color: #000;
+            background-color: var(--c_navbar_active);
+            color: var(--c_text);
         }
 
     .topnav .rightAlign{
         float: right;
     }
 
-    .topnav a.logo{
-        padding: 2.5px 16px;
-        margin: auto;
+    .topnav .home{
+        display: grid;
+        align-items:center;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8px;
+    }
+
+    .topnav img.logo {
+        float: inline-start;
+        vertical-align: middle;
+        width: auto;
+        height: 100%;
+        object-fit:contain;
+        margin: 0px;
+        padding: 0px;
     }
 
     .topnav .icon {
@@ -77,6 +110,7 @@ nav{
     @media screen and (max-width: 600px){
         .topnav.responsive{
             position: relative;
+            height:auto;
         }
         .topnav.responsive a.icon{
             position: absolute;
@@ -86,7 +120,9 @@ nav{
         .topnav.responsive a{
             float: none;
             display: block;
-            text-align: left;
+        }
+        .topnav.responsive .home .logo{
+            display:none;
         }
     }
 
@@ -96,7 +132,7 @@ nav{
 
 /*Screen sections*/
 .section-a {
-    background-color: #8CD2DE;
+    background-color: var(--c_section_a);
     max-width: 1000px;
     margin: auto;
     margin-top: 30px;
@@ -116,6 +152,7 @@ nav{
         padding: 5vh 5vw 1vh 5vw;
     }
 }
+
 /*Social details page*/
 .section-a .contactDetails {
     text-align: left;
@@ -125,16 +162,16 @@ nav{
 
     .section-a .contactDetails > p.socialHeading {
         font-size: 18px;
-        background-color: #70abb5;
+        background-color: var(--c_heading_bg);
         padding: 0px 1vw 0px 1vw;
         max-width: 250px;
         border-radius: 5px 5px 0px 0px;
     }
 
-    .section-a .contactDetails > p.socialHeading a {
-        text-decoration: none;
-        color: #000;
-    }
+        .section-a .contactDetails > p.socialHeading a {
+            text-decoration: none;
+            color: var(--c_text);
+        }
 
     .section-a .contactDetails > p.socialHeading > .linkIcon {
         font-size: 30px;
@@ -156,17 +193,17 @@ nav{
             opacity: 0.7;
         }
         /*Used for filtering*/
-        .section-a .portfolioHighlights .gridItem {
-            width: 200px;
-            height: 240px;
-            background-color: #70abb5;
-            color: #000000;
-            text-align: center;
-            text-transform: uppercase;
-            position: relative;
-            border-radius: 5px 5px 3px 3px;
-            margin: 3px;
-        }
+    .section-a .portfolioHighlights .gridItem {
+        width: 200px;
+        height: 240px;
+        background-color: var(--c_heading_bg);
+        color: var(--c_text);
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        border-radius: 5px 5px 3px 3px;
+        margin: 3px;
+    }
 
             .section-a .portfolioHighlights .gridItem .details {
                 width: 200px;
@@ -208,8 +245,8 @@ nav{
 }
 /*Footer related*/
 footer {
-    background-color: #0d1926;
-    color: #fff;
+    background-color: var(--c_footer_bg);
+    color: var(--c_footer_text);
     overflow: hidden;
     max-width: 1250px;
     margin: auto;
@@ -224,20 +261,19 @@ footer {
 .linkIcon {
     font-weight: 300;
     letter-spacing: 1rem;
-    line-height: 1.5;
     text-decoration: none;
 }
 
 footer .linkIcon {
-    color: #fff;
+    color: var(--c_footer_text);
 }
 
 footer a {
-    color: #314A66
+    color: var(--c_section_a);
 }
 
 .section-a .linkIcon {
-    color: #000;
+    color: var(--c_text);
 }
 
 .section-a .photoColumn {
@@ -272,7 +308,7 @@ footer a {
 
 /*Secondary section style*/
 .section-b {
-    background-color: #9fc3c9;
+    background-color: var(--c_section_b);
     max-width: 1000px;
     margin: auto;
     margin-top: 30px;
@@ -282,7 +318,7 @@ footer a {
 }
 
     .section-b > .flex-container.skill > p {
-        background-color: #B6DEE5;
+        background-color: var(--c_navbar_hover);
         margin: 5px 10px 5px 10px;
         padding: 10px;
         flex-grow: 1;
@@ -294,19 +330,19 @@ footer a {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: #66C6D0;
+    background-color: var(--c_navbar_bg);
 }
 
     .btn:hover {
-        background-color: #B6DEE5;
+        background-color: var(--c_navbar_hover);
     }
 
     .btn.currentFilter {
-        background-color: #3AE1E7;
+        background-color: var(--c_navbar_active);
     }
 
 .miniNav {
-    background-color: #66C6D0;
+    background-color: var(--c_navbar_bg);
     overflow: hidden;
     margin: auto;
     margin-bottom: 3px;
@@ -345,7 +381,7 @@ footer a {
     margin: auto;
     flex-basis: 15vw;
     position: relative;
-    background-color: #66C6D0;
+    background-color: var(--c_navbar_bg);
     padding: 1vh 1vw 1vh 1vw;
     border-radius: 3px;
 }
@@ -353,7 +389,7 @@ footer a {
 a.smallNavLink {
     align-content: center;
     display: block;
-    color: #000;
+    color: var(--c_text);
     text-align: center;
     padding: 5px 5px;
     text-decoration: none;
@@ -362,9 +398,8 @@ a.smallNavLink {
 }
 
     a.smallNavLink:hover {
-        background-color: #B6DEE5;
-        color: #000;
-
+        background-color: var(--c_navbar_hover);
+        color: var(--c_text);
     }
 
 video {
